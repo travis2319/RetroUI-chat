@@ -69,7 +69,7 @@ const Home = () => {
           <input
             type="text"
             name="roomName"
-            placeholder="Room Name"
+            placeholder="Name"
             value={formData.roomName}
             onChange={handleChange}
             required
@@ -77,11 +77,23 @@ const Home = () => {
           />
         </div>
         <div className="my-8 relative">
+          <input
+            type="text"
+            name="roomId"
+            placeholder="Room"
+            value={formData.roomId}
+            onChange={handleChange}
+            required
+            className="w-full h-12 bg-transparent border-x-2 outline-none border-2 border-solid border-[rgba(230,230,230,0.2)] rounded-[40px] text-base text-white p-5 placeholder-white"
+          />
+        </div>
+
+        {/* <div className="my-8 relative">
           <select
             id="Party"
             onChange={handleChange}
             name="roomId"
-            className="bg-transparent border-2 border-[rgba(230,230,230,0.2)] text-sm rounded-[40px] text-white placeholder-white block w-full p-2.5 dark:bg-transparent dark:border-gray-600 dark:placeholder-white dark:text-gray-700"
+            className="bg-transparent border-x-2 border-[rgba(230,230,230,0.2)] text-sm rounded-[40px]  placeholder-white block w-full p-2.5 dark:bg-transparent dark:border-gray-600 dark:placeholder-white dark:text-gray-700"
           >
             <option selected className="text-gray-700">
               Select party
@@ -92,6 +104,7 @@ const Home = () => {
             <option value="GTA6">GTA 6</option>
           </select>
         </div>
+         */}
         <button
           onClick={joinRoom}
           className="w-full h-12 bg-white text-gray-800 font-semibold rounded-[40px] border-2 border-transparent outline-none shadow-md cursor-pointer transition-colors duration-500 hover:border-[1px_solid_rgba(255,255,255,0.18)] hover:text-black hover:font-bold"
